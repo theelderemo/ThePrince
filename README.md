@@ -1,12 +1,50 @@
-# React + Vite
+THE PRINCE — Psychological Warfare Tactical Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dark, immersive React web app for psychological strategy, influence, and field operations. Built as a modular command center for social manipulation, persona engineering, and tactical messaging.
+📦 Features
 
-Currently, two official plugins are available:
+    Chat Module (Intelligence Briefing):
+    Cold, doctrine-driven advisor simulates Machiavellian counsel. No fluff. Just operations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Info Warfare (DM Tool):
+    Builds psychologically loaded cold openers based on weakness, influence vectors, and cover stories.
 
-## Expanding the ESLint configuration
+    Persona Craft (VibeCraft):
+    Strategic identity-shaping tool. Masks, reputation, and emotionless expression.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    Spymaster’s Solitude:
+    Counterintelligence doctrine. Behavioral control. Discipline-building.
+
+    Field Ops (Night Out):
+    Tactical going-out guide. Infiltration, observation, and exfiltration protocols.
+
+    The Dossier:
+    Profile-building module for real or hypothetical targets. Focuses on surface traits vs. vulnerabilities.
+
+    The Sanctum (Core Doctrine):
+    Pulls from Machiavelli, Cialdini, and Greene. Lays out foundational rules for power.
+
+🚀 Getting Started
+1. Clone
+
+git clone https://github.com/YOUR-REPO/the-prince.git
+cd the-prince
+
+2. Install
+
+npm install
+
+3. Run
+
+npm run dev
+
+App runs on http://localhost:5173 (Vite default)
+🛠 Tech Stack
+
+    React with hooks
+
+    TailwindCSS for styling
+
+    Lucide Icons for consistent aesthetic
+
+    No backend (yet) — local memory only
