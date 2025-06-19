@@ -4,8 +4,8 @@ import { Send, Ghost, Skull, BookOpen, Hammer, Crosshair, FileText, Crown, Flame
 
 // --- Supabase Client Setup ---
 // IMPORTANT: Replace with your actual Supabase URL and Anon Key
-const supabaseUrl = 'https://nmtfykzzihfzvqtuubrj.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5tdGZ5a3p6aWhmenZxdHV1YnJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAzMDYwMzYsImV4cCI6MjA2NTg4MjAzNn0.rAyEuOe6Gal1sgrF8h8oZy1hn0w52YFKdnJvq7ad__0';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 
 // --- Auth Context ---
@@ -282,7 +282,7 @@ const ChatPage = () => {
         try {
             const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
             const payload = { contents: chatHistory };
-            const apiKey = ""; // Canvas will provide this
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Canvas will provide this
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
             const response = await fetch(apiUrl, {
@@ -386,7 +386,7 @@ const LiveFireTacticsPage = () => {
         try {
             const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
             const payload = { contents: chatHistory };
-            const apiKey = ""; // Canvas will provide this
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Canvas will provide this
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
             const response = await fetch(apiUrl, {
@@ -500,7 +500,7 @@ const DossierPage = () => {
                     }
                 }
             };
-            const apiKey = ""; // Canvas will provide this
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Canvas will provide this
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
             const response = await fetch(apiUrl, {
@@ -617,7 +617,7 @@ const CodexPage = () => {
                     }
                 }
             };
-            const apiKey = ""; // Canvas will provide this
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Canvas will provide this
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
             const response = await fetch(apiUrl, {
@@ -740,7 +740,7 @@ const PersonaBuilderPage = () => {
         try {
             const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
             const payload = { contents: chatHistory };
-            const apiKey = ""; // Canvas will provide this
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Canvas will provide this
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
             const response = await fetch(apiUrl, {
@@ -869,7 +869,7 @@ const TrainingGroundPage = () => {
         try {
             let chatHistory = [{ role: "user", parts: [{ text: simPrompt }] }];
             let payload = { contents: chatHistory };
-            const apiKey = ""; // Canvas will provide this
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Canvas will provide this
             let apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
             const simResponse = await fetch(apiUrl, {
