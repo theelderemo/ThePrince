@@ -144,13 +144,13 @@ const AuthPage = () => {
             return;
         }
 
-        // Master User Login
-        if (email === 'master@tactical.dev' && password === 'masterpassword') {
-            const { error: signInError } = await signIn({ email, password });
-            if (signInError) {
-                setError(`Master user login failed. Have you created it in your Supabase project? Error: ${signInError.message}`);
-            }
-        } else {
+        // Master User Login (removed for security)
+        // if (email === 'master@tactical.dev' && password === 'masterpassword') {
+        //     const { error: signInError } = await signIn({ email, password });
+        //     if (signInError) {
+        //         setError(`Master user login failed. Have you created it in your Supabase project? Error: ${signInError.message}`);
+        //     }
+        // } else {
              // Regular sign-in or sign-up
             if (isLogin) {
                 const { error: signInError } = await signIn({ email, password });
@@ -163,7 +163,7 @@ const AuthPage = () => {
                     setMessage('Sign up successful! Please check your email for a confirmation link.');
                 }
             }
-        }
+        // }
         setLoading(false);
     };
 
@@ -205,11 +205,7 @@ const AuthPage = () => {
                         {isLogin ? 'Sign Up' : 'Login'}
                     </button>
                 </p>
-                 <div className="text-center text-xs text-gray-500 pt-4 border-t border-gray-800">
-                     <p className="font-bold">Master Credentials (Testing Only):</p>
-                     <p>Email: master@tactical.dev</p>
-                     <p>Pass: masterpassword</p>
-                 </div>
+                 {/* Removed hardcoded master credentials for security */}
             </div>
         </div>
     );
